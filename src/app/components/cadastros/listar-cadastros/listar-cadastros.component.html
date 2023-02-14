@@ -1,0 +1,16 @@
+<section class="container">
+  <header class="header">
+    <h2>Cadastros</h2>
+    <button routerLink="/cadastro" class="botao">Realizar Cadastro</button>
+  </header>
+  <div class="mural" *ngIf="listaCadastros.length > 0, else listaVazia">
+    <div *ngFor="let cadastro of listaCadastros">
+      <app-cadastro [cadastro]="cadastro"></app-cadastro>
+    </div>
+  </div>
+</section>
+<ng-template #listaVazia>
+  <div>
+    <h3>Não há pessoas Cadastradas</h3>
+  </div>
+</ng-template>

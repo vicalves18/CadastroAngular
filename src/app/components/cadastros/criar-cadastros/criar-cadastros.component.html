@@ -1,0 +1,16 @@
+<section class="container">
+  <header class="header">
+    <h2>Cadastro</h2>
+  </header>
+  <form>
+    <label for="nome">Nome</label>
+    <input type="textarea" class="input" id="nome" name="nome" placeholder="Digite seu Nome..." [(ngModel)]="cadastro.nome">
+    <label for="email">Email</label>
+    <input type="email" class="input" id="email" name="email" placeholder="nome@hotmail.com" [(ngModel)]="cadastro.email">
+
+    <div class="botoes">
+      <button (click)="cadastrar()" class="botao">Salvar</button>
+      <button (click)="cancelar()" routerLink="/listar" class="botao">Cancelar</button>
+    </div>
+  </form>
+</section>
