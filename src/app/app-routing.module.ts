@@ -1,3 +1,4 @@
+import { ExcluirCadastroComponent } from './components/cadastros/excluir-cadastro/excluir-cadastro.component';
 import { ListarCadastrosComponent } from './components/cadastros/listar-cadastros/listar-cadastros.component';
 import { CriarCadastrosComponent } from './components/cadastros/criar-cadastros/criar-cadastros.component';
 import { NgModule } from '@angular/core';
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'listar',
     component: ListarCadastrosComponent
+  },
+  {
+    path: 'cadastro/excluir/:id',
+    component: ExcluirCadastroComponent
   }
 ];
 

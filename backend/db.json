@@ -1,0 +1,24 @@
+{
+  "cadastros": [
+    {
+      "id": 1,
+      "nome": "Victória Alves",
+      "email": "vic@gmail.com"
+    },
+    {
+      "id": 2,
+      "nome": "Pedro Alonso",
+      "email": "pedro@gmail.com"
+    },
+    {
+      "id": 3,
+      "nome": "Paulo Rafael",
+      "email": "prafael@gmail.com"
+    },
+    {
+      "nome": "Quiteria Alves",
+      "email": "quit@gmail.com",
+      "id": 4
+    }
+  ]
+}
