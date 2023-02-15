@@ -1,3 +1,4 @@
+import { EditarCadastroComponent } from './components/cadastros/editar-cadastro/editar-cadastro.component';
 import { ExcluirCadastroComponent } from './components/cadastros/excluir-cadastro/excluir-cadastro.component';
 import { ListarCadastrosComponent } from './components/cadastros/listar-cadastros/listar-cadastros.component';
 import { CriarCadastrosComponent } from './components/cadastros/criar-cadastros/criar-cadastros.component';
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'cadastro/excluir/:id',
     component: ExcluirCadastroComponent
+  },
+  {
+    path: 'cadastro/editar/:id',
+    component: EditarCadastroComponent
   }
 ];
 

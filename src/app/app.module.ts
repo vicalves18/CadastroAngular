@@ -10,6 +10,7 @@ import { CriarCadastrosComponent } from './components/cadastros/criar-cadastros/
 import { FormsModule } from '@angular/forms';
 import { ListarCadastrosComponent } from './components/cadastros/listar-cadastros/listar-cadastros.component';
 import { ExcluirCadastroComponent } from './components/cadastros/excluir-cadastro/excluir-cadastro.component';
+import { EditarCadastroComponent } from './components/cadastros/editar-cadastro/editar-cadastro.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ExcluirCadastroComponent } from './components/cadastros/excluir-cadastr
     CriarCadastrosComponent,
     ListarCadastrosComponent,
     CadastroComponent,
-    ExcluirCadastroComponent
+    ExcluirCadastroComponent,
+    EditarCadastroComponent
   ],
   imports: [
     BrowserModule,

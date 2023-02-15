@@ -19,6 +19,11 @@ export class CadastroService {
     return this.http.post<Cadastro>(this.API, cadastro);
   }
 
+  editar(cadastro : Cadastro): Observable<Cadastro>{
+    const url = `${this.API}/${cadastro.id}`;
+    return this.http.put<Cadastro>(url, cadastro);
+  }
+
   excluir(id: number): Observable<Cadastro>{
     const url = `${this.API}/${id}`;
     return this.http.delete<Cadastro>(url);
