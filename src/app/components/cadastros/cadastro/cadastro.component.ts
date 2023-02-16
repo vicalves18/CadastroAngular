@@ -11,7 +11,8 @@ export class CadastroComponent{
   @Input() cadastro: Cadastro = {
     id: 4,
     nome: 'Paulo Rafael',
-    email: 'paulo@hotmail.com'
+    email: 'paulo@hotmail.com',
+    tel: '(21) 99865-2349'
   }
 
 }

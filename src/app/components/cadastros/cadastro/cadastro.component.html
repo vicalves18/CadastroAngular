@@ -1,19 +1,18 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 <div class="cadastro">
-  <table>
-    <tr>
-      <th>Nome</th>
-      <th>Email</th>
-      <th></th>
-    </tr>
-    <tr>
-      <td>{{ cadastro.nome }}</td>
-      <td>{{ cadastro.email }}</td>
-      <td>
-        <div class="acoes">
-          <button routerLink="/cadastro/editar/{{cadastro.id}}">Editar</button>
-          <button routerLink="/cadastro/excluir/{{cadastro.id}}">Remover</button>
-        </div>
-      </td>
-    </tr>
-  </table>
+  <ul class="list-group list-group-horizontal w-75">
+    <li class="list-group-item col-4"><p>{{ cadastro.nome }}</p></li>
+    <li class="list-group-item col-4"><p>{{ cadastro.email }}</p></li>
+    <li class="list-group-item col-4"><p>{{ cadastro.tel }}</p></li>
+    <li class="list-group-item col-4">
+      <div class="acoes">
+        <button routerLink="/cadastro/editar/{{cadastro.id}}" class="btn btn-outline-warning ">Editar</button>
+        <button routerLink="/cadastro/excluir/{{cadastro.id}}" class="btn btn-outline-danger ms-2">Remover</button>
+      </div>
+    </li>
+  </ul>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

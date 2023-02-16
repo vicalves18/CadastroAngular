@@ -12,7 +12,8 @@ export class CriarCadastrosComponent implements OnInit{
 
   cadastro: Cadastro ={
     nome:'',
-    email:''
+    email:'',
+    tel:''
 
   }
 

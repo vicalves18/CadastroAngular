@@ -12,7 +12,8 @@ export class ExcluirCadastroComponent implements OnInit{
   cadastro: Cadastro = {
     id:0,
     nome: '',
-    email:''
+    email:'',
+    tel:''
   }
 
   //ActivatedRoute disponibiliza informações da rota

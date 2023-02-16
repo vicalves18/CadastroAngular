@@ -13,7 +13,8 @@ export class EditarCadastroComponent implements OnInit{
   cadastro: Cadastro ={
     id:0,
     nome:'',
-    email:''
+    email:'',
+    tel:''
   }
   constructor(private service: CadastroService,
     private router: Router,
