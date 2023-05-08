@@ -2,7 +2,7 @@
   "cadastros": [
     {
       "id": 3,
-      "nome": "Paulo Rafael Dias ",
+      "nome": "Paulo Rafael ",
       "email": "prafael@gmail.com",
       "tel": "(21) 99876-3475"
     },
@@ -19,22 +19,16 @@
       "id": 5
     },
     {
-      "nome": "Pedro",
+      "nome": "Pedro Alves",
       "email": "vic@gmail.com",
       "tel": "(21) 12212-7641",
       "id": 10
     },
     {
-      "nome": "Ana Maria ",
-      "email": "",
-      "tel": "",
+      "nome": "José Antonio",
+      "email": "jose@gmail.com",
+      "tel": "(21) 99923-5233",
       "id": 11
-    },
-    {
-      "nome": "Ana Maria ",
-      "email": "Ana@gmail.com",
-      "tel": "(21) 9999-9999",
-      "id": 12
     }
   ]
 }

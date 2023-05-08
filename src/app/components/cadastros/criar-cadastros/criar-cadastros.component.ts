@@ -2,6 +2,7 @@ import { CadastroService } from './../cadastro.service';
 import { Cadastro } from './../cadastros';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-criar-cadastros',
@@ -10,25 +11,38 @@ import { Router } from '@angular/router';
 })
 export class CriarCadastrosComponent implements OnInit{
 
-  cadastro: Cadastro ={
-    nome:'',
-    email:'',
-    tel:''
-
-  }
+  formulario!: FormGroup;
 
   //Injeção de Depência
   constructor(private service: CadastroService,
-    private router: Router){}
+    private router: Router,
+    private formBuilder : FormBuilder){}
 
   ngOnInit(): void {
-
+    this.formulario = this.formBuilder.group({
+      nome: ['',Validators.compose([
+        Validators.required,
+        Validators.pattern(/(.|\s)*\S(.|\s)*/),
+        Validators.minLength(5)
+      ])],
+      email:['',Validators.compose([
+        Validators.required,
+        Validators.email
+      ])],
+      tel:['',Validators.compose([
+        Validators.required,
+        Validators.pattern('\(\d+\)[ ]?\d+[-. ]?\d+')
+      ])]
+    })
   }
 
   cadastrar(){
-    this.service.criar(this.cadastro).subscribe(() =>{
-      this.router.navigate(['/listar'])
-    });
+    console.log(this.formulario);
+    if(this.formulario.valid){
+      this.service.criar(this.formulario.value).subscribe(() =>{
+        this.router.navigate(['/listar'])
+      });
+    }
   }
 
   cancelar(){

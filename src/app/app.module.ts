@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CriarCadastrosComponent } from './components/cadastros/criar-cadastros/criar-cadastros.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListarCadastrosComponent } from './components/cadastros/listar-cadastros/listar-cadastros.component';
 import { ExcluirCadastroComponent } from './components/cadastros/excluir-cadastro/excluir-cadastro.component';
 import { EditarCadastroComponent } from './components/cadastros/editar-cadastro/editar-cadastro.component';
@@ -26,7 +26,8 @@ import { EditarCadastroComponent } from './components/cadastros/editar-cadastro/
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
