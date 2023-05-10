@@ -12,6 +12,8 @@ import { ListarCadastrosComponent } from './components/cadastros/listar-cadastro
 import { ExcluirCadastroComponent } from './components/cadastros/excluir-cadastro/excluir-cadastro.component';
 import { EditarCadastroComponent } from './components/cadastros/editar-cadastro/editar-cadastro.component';
 
+import { NgxMaskModule} from 'ngx-mask'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,10 @@ import { EditarCadastroComponent } from './components/cadastros/editar-cadastro/
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMaskModule.forRoot({
+      dropSpecialCharacters : false
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

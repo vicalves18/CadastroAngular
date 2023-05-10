@@ -23,7 +23,7 @@
         </div>
         <div class="col-lg-6 col-md-12">
           <label for="email" class="form-label">E-mail</label>
-          <input type="email" class="input form-control" id="email" formControlName="email" placeholder="nome@hotmail.com" >
+          <input type="email" class="input form-control" id="email" formControlName="email"  placeholder="nome@hotmail.com" >
           <div class="error" *ngIf="formulario.get('email')?.errors?.['required'] && formulario.get('email')?.touched">
             <p class="text-danger">Email é obrigatório!</p>
           </div>
@@ -35,12 +35,12 @@
       <div class="row">
         <div class="col-lg-6 col-md-12">
           <label for="Telefone" class="form-label">Telefone</label>
-          <input type="textarea" class="input form-control" id="tel" formControlName="tel" placeholder="(xx) xxxxx-xxxx" >
+          <input type="tel" class="input form-control" id="tel" formControlName="tel" mask="(00) 0000-0000||(00) 0 0000-0000" placeholder="(xx) xxxxx-xxxx" >
           <div class="error" *ngIf="formulario.get('tel')?.errors?.['required'] && formulario.get('tel')?.touched">
             <p class="text-danger">Telefone é obrigatório!</p>
           </div>
-          <div class="error" *ngIf="formulario.get('tel')?.errors?.['pattern'] && formulario.get('tel')?.touched">
-            <p class="text-danger">Formato incorreto!</p>
+          <div class="error" *ngIf="formulario.get('tel')?.errors?.['minlength'] && formulario.get('tel')?.touched">
+            <p class="text-danger">Favor preencher corretamente!</p>
           </div>
         </div>
       </div>

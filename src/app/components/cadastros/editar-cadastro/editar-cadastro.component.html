@@ -7,21 +7,39 @@
     <h2 class="text-center mt-3">Editar Cadastro</h2>
   </header>
   <div class="container mt-3 col-lg-8 col-md-6 w-50 border rounded bg-light">
-    <form class="card-body mt-3">
+    <form [formGroup]="formulario" *ngIf="formulario" class="card-body mt-3">
       <div class="row">
         <div class="col-lg-6 col-md-12">
-          <label for="nome">Nome completo</label>
-          <input type="textarea" class="input form-control" id="nome" name="nome" placeholder="Digite seu Nome..." [(ngModel)]="cadastro.nome">
+          <label for="nome" class="form-label">Nome completo</label>
+          <input type="textarea" class="input form-control" id="nome" formControlName="nome" placeholder="Digite seu Nome..." >
+          <div class="error" *ngIf="formulario.get('nome')?.errors?.['required'] && formulario.get('nome')?.touched">
+            <p class="text-danger">Nome é obrigatório!</p>
+          </div>
+          <div class="error" *ngIf="formulario.get('nome')?.errors?.['minlength'] && formulario.get('nome')?.touched">
+            <p class="text-danger">Nome precisa de no minímo 5 caracteres!</p>
+          </div>
         </div>
         <div class="col-lg-6 col-md-12">
-          <label for="email">E-mail</label>
-          <input type="email" class="input form-control" id="email" name="email" placeholder="nome@hotmail.com" [(ngModel)]="cadastro.email">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" class="input form-control" id="email" formControlName="email"  placeholder="nome@hotmail.com" >
+          <div class="error" *ngIf="formulario.get('email')?.errors?.['required'] && formulario.get('email')?.touched">
+            <p class="text-danger">Email é obrigatório!</p>
+          </div>
+          <div class="error" *ngIf="formulario.get('email')?.errors?.['email'] && formulario.get('email')?.touched">
+            <p class="text-danger">Formato incorreto!</p>
+          </div>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-6 col-md-12">
-          <label for="Telefone">Telefone</label>
-          <input type="textarea" class="input form-control" id="tel" name="tel" placeholder="(xx) xxxxx-xxxx" [(ngModel)]="cadastro.tel">
+          <label for="Telefone" class="form-label">Telefone</label>
+          <input type="tel" class="input form-control" id="tel" formControlName="tel" mask="(00) 0000-0000||(00) 0 0000-0000" placeholder="(xx) xxxxx-xxxx" >
+          <div class="error" *ngIf="formulario.get('tel')?.errors?.['required'] && formulario.get('tel')?.touched">
+            <p class="text-danger">Telefone é obrigatório!</p>
+          </div>
+          <div class="error" *ngIf="formulario.get('tel')?.errors?.['minlength'] && formulario.get('tel')?.touched">
+            <p class="text-danger">Favor preencher corretamente!</p>
+          </div>
         </div>
       </div>
 

@@ -31,7 +31,7 @@ export class CriarCadastrosComponent implements OnInit{
       ])],
       tel:['',Validators.compose([
         Validators.required,
-        Validators.pattern('\(\d+\)[ ]?\d+[-. ]?\d+')
+        Validators.minLength(10)
       ])]
     })
   }
